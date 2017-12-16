@@ -1,0 +1,57 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Teams</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Abr</th>
+      <th>Win</th>
+      <th>Loss</th>
+      <th>Avg</th>
+      <th>Hw</th>
+      <th>Hl</th>
+      <th>Aw</th>
+      <th>Al</th>
+      <th>Pf</th>
+      <th>Pa</th>
+      <th>Diff</th>
+      <th>Division</th>
+      <th>Playoffs</th>
+      <th>Pennants</th>
+      <th>Championships</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @teams.each do |team| %>
+      <tr>
+        <td><%= team.name %></td>
+        <td><%= team.abr %></td>
+        <td><%= team.win %></td>
+        <td><%= team.loss %></td>
+        <td><%= team.avg %></td>
+        <td><%= team.hw %></td>
+        <td><%= team.hl %></td>
+        <td><%= team.aw %></td>
+        <td><%= team.al %></td>
+        <td><%= team.pf %></td>
+        <td><%= team.pa %></td>
+        <td><%= team.diff %></td>
+        <td><%= team.division %></td>
+        <td><%= team.playoffs %></td>
+        <td><%= team.pennants %></td>
+        <td><%= team.championships %></td>
+        <td><%= link_to 'Show', team %></td>
+        <td><%= link_to 'Edit', edit_team_path(team) %></td>
+        <td><%= link_to 'Destroy', team, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Team', new_team_path %>

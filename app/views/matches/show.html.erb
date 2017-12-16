@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Away:</strong>
+  <%= @match.away %>
+</p>
+
+<p>
+  <strong>A score:</strong>
+  <%= @match.a_score %>
+</p>
+
+<p>
+  <strong>Home:</strong>
+  <%= @match.home %>
+</p>
+
+<p>
+  <strong>H score:</strong>
+  <%= @match.h_score %>
+</p>
+
+<p>
+  <strong>Week:</strong>
+  <%= @match.week %>
+</p>
+
+<%= link_to 'Edit', edit_match_path(@match) %> |
+<%= link_to 'Back', matches_path %>

@@ -1,0 +1,18 @@
+<h1>Schedule 2018</h1>
+
+<div class="container">
+
+  <% i = 1 %>
+  <% @schedule.each do |sc| %>
+    <table class="striped highlight" style="align-content: center">
+      <thead>
+        <tr> <td colspan="2"> Week <%= i %> </td> </tr>
+      </thead>
+      <tbody>
+        <%= render sc %>
+        <% i += 1 %>
+      </tbody>
+    </table>
+  <% end %>
+
+</div>

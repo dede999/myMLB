@@ -1,0 +1,5 @@
+<!--<div class="collapsible-body"> <%= "#{match.id} \t #{match.away} #{match.a_score} @ #{match.home} #{match.h_score}" %> </div>-->
+<tr>
+  <td> <%= "#{match.away} #{match.a_score} @ #{match.h_score} #{match.home}" %> </td>
+  <td> <%= button_to 'control_point', match, :method => :get, action: :simulate, class: "material-icons" %> </td>
+</tr>

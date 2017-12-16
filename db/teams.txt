@@ -1,0 +1,30 @@
+New York Yankees,   NYY,18,40,27,53
+Atlanta Braves, ATL,17,17,3,23
+Los Angeles Dodgers,    LAD,16,23,6,31
+Oakland Athletics,  OAK,16,15,9,26
+St. Louis Cardinals,    STL,13,23,11,28
+Philadelphia Phillies,  PHI,12,7,2,14
+Cincinnati Reds,    CIN,10,10,5,15
+Minnesota Twins,    MIN,10,6,3,15
+Baltimore Orioles,  BAL,9,7,3,14
+Boston Red Sox, BOS,9,13,8,23
+Cleveland Indians,  CLE,9,6,2,13
+Los Angeles Angels, LAA,9,1,1,10
+Pittsburgh Pirates, PIT,9,9,5,17
+Houston Astros, HOU,8,2,1,11
+Kansas City Royals, KC,8,4,2,9
+San Francisco Giants,   SFG,8,23,8,26
+Chicago Cubs,   CHC,7,17,3,19
+Detroit Tigers, DET,7,11,4,16
+Texas Rangers,  TEX,7,2,0,8
+New York Mets,  NYM,6,5,2,9
+Toronto Blue Jays,  TOR,6,2,2,7
+Arizona Diamondbacks,   ARI,5,1,1,6
+Chicago White Sox,  CWS,5,6,3,9
+San Diego Padres,   SD, 5,2,0,5
+Washington Nationals,   WAS,5,0,0,5
+Milwaukee Brewers,  MIL,3,1,0,4
+Seattle Mariners,   SEA,3,0,0,4
+Tampa Bay Rays, TB, 2,1,0,4
+Colorado Rockies,   COL,0,1,0,4
+Miami Marlins,  MIA,0,2,2,2

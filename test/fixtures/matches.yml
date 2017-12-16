@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  away: MyText
+  a_score: 1
+  home: MyText
+  h_score: 1
+  week: 1
+
+two:
+  away: MyText
+  a_score: 1
+  home: MyText
+  h_score: 1
+  week: 1
