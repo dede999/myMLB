@@ -27,18 +27,18 @@ ActiveRecord::Schema.define(version: 20171208221115) do
     t.string   "abr"
     t.integer  "win"
     t.integer  "loss"
-    t.decimal  "avg"
     t.integer  "hw"
     t.integer  "hl"
     t.integer  "aw"
     t.integer  "al"
     t.integer  "pf"
     t.integer  "pa"
-    t.integer  "diff"
     t.integer  "division"
     t.integer  "playoffs"
     t.integer  "pennants"
     t.integer  "championships"
+    t.string   "div"
+    t.string   "league"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
   end

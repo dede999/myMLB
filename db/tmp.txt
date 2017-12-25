@@ -1,6 +1,6 @@
 League	Day 	Month	Day	Home	Visitor
-NL	Sunday	April	2	ARI	SFG
-AL	Sunday	April	2	TB	NYY
+#NL	Sunday	April	2	ARI	SFG
+#AL	Sunday	April	2	TB	NYY
 NL	Monday	April	3	WSH	MIA
 NL	Monday	April	3	NYM	ATL
 NL	Monday	April	3	MIL	COL

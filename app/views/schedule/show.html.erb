@@ -4,9 +4,14 @@
 
   <% i = 1 %>
   <% @schedule.each do |sc| %>
-    <table class="striped highlight" style="align-content: center">
+    <table class="highlight" style="align-content: center">
       <thead>
-        <tr> <td colspan="2"> Week <%= i %> </td> </tr>
+        <tr>
+          <td style="text-align: center"> Away </td>
+          <td style="text-align: center" colspan="2"> Score </td>
+          <td style="text-align: center"> Home </td>
+          <td style="text-align: center"> Week <%= i %> </td>
+        </tr>
       </thead>
       <tbody>
         <%= render sc %>

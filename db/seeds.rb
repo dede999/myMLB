@@ -11,11 +11,10 @@ Team db
 vec = IO.readlines "db/teams.txt"
 vec.each do |eq|
   a = eq.split ","
-  Team.create(:name => a[0], :abr => a[1].delete(' '), :win => 0, :loss => 0, :avg => 0.000, :aw => 0, :al => 0, :hw => 0, :hl => 0, :pf => 0, :pa => 0, :diff => 0, :division => a[2], :pennants => a[3], :championships => a[4], :playoffs => a[5])
+  t = Team.create(:name => a[0], :abr => a[1].delete(' '), :win => 0, :loss => 0, :aw => 0, :al => 0, :hw => 0, :hl => 0, :pf => 0, :pa => 0, :division => a[2], :pennants => a[3], :championships => a[4], :playoffs => a[5], :league => a[6], div: a[7])
+  p t.name
 end
 =end
-
-
 
 vec = IO.readlines "db/schedule.txt"
 week = 1

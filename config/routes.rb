@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'standings/divisional'
+
+  get 'standings/wc'
+
   get 'schedule/show'
   root to: 'schedule#show'
   resources :matches

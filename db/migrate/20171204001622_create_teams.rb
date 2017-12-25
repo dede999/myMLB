@@ -5,19 +5,18 @@ class CreateTeams < ActiveRecord::Migration[5.0]
       t.string :abr
       t.integer :win
       t.integer :loss
-      t.decimal :avg, precision: 3
       t.integer :hw
       t.integer :hl
       t.integer :aw
       t.integer :al
       t.integer :pf
       t.integer :pa
-      t.integer :diff
       t.integer :division
       t.integer :playoffs
       t.integer :pennants
       t.integer :championships
-
+      t.string :div
+      t.string :league
       t.timestamps
     end
   end
