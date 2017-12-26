@@ -36,10 +36,10 @@ class MatchesController < ApplicationController
       h.increment!(:hl)
       h.increment!(:loss)
     end
-    @match.h_score = home
-    @match.a_score = away
     h.save!
     a.save!
+    @match.h_score = home
+    @match.a_score = away
     @match.save!
   end
 
@@ -56,7 +56,6 @@ class MatchesController < ApplicationController
   # POST /matches.json
   def create
     @match = Match.new(match_params)
-
     respond_to do |format|
       if @match.save
         format.html { redirect_to @match, notice: 'Match was successfully created.' }
@@ -73,7 +72,7 @@ class MatchesController < ApplicationController
   def update
     respond_to do |format|
       if @match.update(match_params)
-        format.html { redirect_to @match, notice: 'Match was successfully updated.' }
+        format.html { redirect_to 'schedule/show', notice: 'Match was successfully updated.' }
         format.json { render :show, status: :ok, location: @match }
       else
         format.html { render :edit }

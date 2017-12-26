@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   get 'standings/wc'
 
-  get 'schedule/show'
+  get 'schedule/show', to: 'schedule#show'
   root to: 'schedule#show'
   resources :matches
   resources :teams

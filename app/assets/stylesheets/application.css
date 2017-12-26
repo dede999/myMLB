@@ -14,7 +14,7 @@
  *= require_self
  */
 
-.time {
+td > div.time {
     background-color: antiquewhite;
     color: red;
 }
