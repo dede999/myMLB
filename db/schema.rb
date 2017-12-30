@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171225174812) do
+ActiveRecord::Schema.define(version: 20171228160147) do
 
   create_table "matches", force: :cascade do |t|
     t.text     "away"
@@ -42,6 +42,10 @@ ActiveRecord::Schema.define(version: 20171225174812) do
     t.string   "league"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
+    t.integer  "avg"
+    t.integer  "h_avg"
+    t.integer  "a_avg"
+    t.integer  "diff"
   end
 
 end

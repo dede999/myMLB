@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  get 'standings/divisional'
+  match 'divisional' => 'standings#divisional', via: 'get'
+  match 'schedule' => 'schedule#show', via: 'get'
 
   get 'standings/wc'
 

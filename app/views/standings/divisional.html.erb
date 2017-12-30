@@ -1,2 +1,53 @@
-<h1>Standings#divisional</h1>
-<p>Find me in app/views/standings/divisional.html.erb</p>
+<h1>Standings</h1>
+<h2> Divisional </h2>
+
+<%
+  l = 0
+  cc = ['red', 'blue']
+%>
+<% ll = ['American', 'National'] %>
+<% lll = ['AL', 'NL'] %>
+<% divs = ['East', 'Central', 'West'] %>
+<% @times.each do |league| %>
+  <h4 style="font-weight: bolder; color: <%=cc[l]%>"> <%= ll[l] %> League </h4>
+  <% 3.times do |d| %>
+    <table class="bordered">
+      <thead>
+        <tr>
+          <th> # </th>
+          <th> <%= "#{lll[l]} #{divs[d]}" %> </th>
+          <th> W </th>
+          <th> L </th>
+          <th> PCT </th>
+          <th> GB </th>
+          <th> PF </th>
+          <th> PA </th>
+          <th> Last 10 </th>
+          <th> Streak </th>
+          <th> Home </th>
+          <th> Road </th>
+        </tr>
+      </thead>
+      <tbody>
+      <% (1..5).each do |pos| %> <!--(1> 4) (2> 3) (3> 2) (4> 1) (5> 0) -->
+        <tr>
+          <td> <%= pos %> </td>
+          <% equipe = @times[l][d][5 - pos] %>
+          <td> <%= equipe.name %> </td>
+          <td> <%= equipe.win %> </td>
+          <td> <%= equipe.loss %> </td>
+          <td> <%= avg equipe.avg %> </td>
+          <td> <%= pos == 1? "--": "0.0" %> </td>
+          <th> <%= equipe.pf %> </th>
+          <th> <%= equipe.pa %> </th>
+          <td> 0 - 0 </td>
+          <td> W 0 </td>
+          <td> <%= equipe.hw %> - <%= equipe.hl %> </td>
+          <td> <%= equipe.aw %> - <%= equipe.al %> </td>
+        </tr>
+      <% end %>
+      </tbody>
+    </table>
+  <% end %>
+  <% l += 1 %>
+<% end %>

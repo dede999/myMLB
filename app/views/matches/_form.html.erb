@@ -43,11 +43,13 @@
 
   <div class="actions">
     <%
-      if not @match.happened
+      unless @match.happened
         h.increment!(:pf, home)
         h.increment!(:pa, away)
+        h.increment!(:diff, h.pf - h.pa)
         a.increment!(:pf, away)
         a.increment!(:pa, home)
+        a.increment!(:diff, a.pf - a.pa)
         if home > away # hw, al
           h.increment!(:hw)
           h.increment!(:win)
@@ -59,6 +61,14 @@
           h.increment!(:hl)
           h.increment!(:loss)
         end
+        home_total = (1000*h.win)/(h.win + h.loss)
+        h.increment!(:avg, home_total - h.avg)
+        home_avg = (1000*h.hw)/(h.hw + h.hl)
+        h.increment!(:h_avg, home_avg - h.h_avg)
+        away_total = (1000*a.win)/(a.win + a.loss)
+        a.increment!(:avg, away_total - a.avg)
+        away_avg = (1000*a.aw)/(a.aw + a.al)
+        a.increment!(:a_avg, away_avg - a.a_avg)
         h.save!
         a.save!
         @match.happened = TRUE

@@ -12,37 +12,6 @@ class MatchesController < ApplicationController
   def show
   end
 
-  def simulate
-    h = Team.find_by_name(@match.home)
-    a = Team.find_by_name(@match.away)
-    home = 0
-    away = 0
-    while home == away
-      home += Random.rand(0..8)
-      away += Random.rand(0..8)
-    end
-    h.increment!(:pf, home)
-    h.increment!(:pa, away)
-    a.increment!(:pf, away)
-    a.increment!(:pa, home)
-    if home > away # hw, al
-      h.increment!(:hw)
-      h.increment!(:win)
-      a.increment!(:al)
-      a.increment!(:loss)
-    else # hl, aw
-      a.increment!(:aw)
-      a.increment!(:win)
-      h.increment!(:hl)
-      h.increment!(:loss)
-    end
-    h.save!
-    a.save!
-    @match.h_score = home
-    @match.a_score = away
-    @match.save!
-  end
-
   # GET /matches/new
   def new
     @match = Match.new
@@ -72,7 +41,7 @@ class MatchesController < ApplicationController
   def update
     respond_to do |format|
       if @match.update(match_params)
-        format.html { redirect_to 'schedule/show', notice: 'Match was successfully updated.' }
+        format.html { redirect_to @match, notice: 'Match was successfully updated.' }
         format.json { render :show, status: :ok, location: @match }
       else
         format.html { render :edit }
