@@ -7,15 +7,33 @@
     <table class="highlight" style="align-content: center">
       <thead>
         <tr>
-          <td style="text-align: center"> Away </td>
-          <td style="text-align: center" colspan="2"> Score </td>
-          <td style="text-align: center"> Home </td>
-          <td style="text-align: center"> Week <%= i %> </td>
+          <th style="text-align: center"> Away </th>
+          <th style="text-align: center" colspan="2"> Score </th>
+          <th style="text-align: center"> Home </th>
+          <th style="text-align: center"> Week <%= i %> </th>
         </tr>
       </thead>
       <tbody>
         <%= render sc %>
         <% i += 1 %>
+      </tbody>
+    </table>
+  <% end %>
+
+  <% i = 1 %>
+  <% @played.each do |sc| %>
+    <table class="highlight" style="align-content: center">
+      <thead>
+      <tr>
+        <th style="text-align: center"> Away </th>
+        <th style="text-align: center" colspan="2"> Score </th>
+        <th style="text-align: center"> Home </th>
+        <th style="text-align: center"> Week <%= i %> </th>
+      </tr>
+      </thead>
+      <tbody>
+      <%= render sc %>
+      <% i += 1 %>
       </tbody>
     </table>
   <% end %>

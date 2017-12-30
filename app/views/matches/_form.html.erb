@@ -71,7 +71,7 @@
         a.increment!(:a_avg, away_avg - a.a_avg)
         h.save!
         a.save!
-        @match.happened = TRUE
+        @match.update_attribute('happened', true)
       end
     %>
     <%= f.submit %>

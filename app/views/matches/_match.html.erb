@@ -4,5 +4,9 @@
   <td style="text-align: center"> <%= match.a_score %> </td>
   <td style="text-align: center"> <%= match.h_score %> </td>
   <td style="text-align: center"> <%= match.home %> </td>
-  <td> <%= link_to 'Play Ball', edit_match_path(match), class: "waves-effect waves-light btn green darken-4" %> </td>
+  <% if match.happened %>
+    <td> <%= link_to 'Play Ball', edit_match_path(match), class: "waves-effect waves-light btn green disabled darken-4" %> </td>
+  <% else %>
+    <td> <%= link_to 'Play Ball', edit_match_path(match), class: "waves-effect waves-light btn green darken-4" %> </td>
+  <% end %>
 </tr>
