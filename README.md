@@ -3,7 +3,7 @@
 Esse aplicativo busca reproduzir uma temporada da Major League Baseball (MLB). O caledário usado é de 2017, pois foi o mais acessível quando eu criava o modelo de partidas.
 O aplicativo é construído em Ruby on Rails 5.0.1 e usa, via CDN, Materialize 
 
-This app tries to reproduce a MLB season (Regular season and Postseason). I used 2017 schedule because it was more acressible when I created Matches model.
+This app tries to reproduce a MLB season (Regular season and Postseason). I used 2017 schedule because it was more accessble when I created Matches model.
 App is built on Ruby on Rails version 5.0.1 and uses Materialize through CDN
 
 # O que foi feito (What has been done)?
